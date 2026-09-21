@@ -43,7 +43,7 @@ A differentiable Cook-Torrance renderer (GGX normal distribution, Schlick Fresne
 ### 3D Liver Segmentation from Abdominal CT
 [abdominal-ct-segmentation](https://github.com/AdebanjiAdelowo/abdominal-ct-segmentation)
 
-A 3D U-Net trained end-to-end for binary liver segmentation on the Medical Segmentation Decathlon (Task03) dataset, 131 CT volumes, using foreground-biased patch sampling, a combined soft-Dice and BCE loss, cosine learning-rate annealing, and Gaussian sliding-window inference. Best validation Dice 0.9886, HD95 ≤ 1 mm, after 200 epochs on a single Kaggle T4 GPU.
+A 3D U-Net trained end-to-end for binary liver segmentation on the Medical Segmentation Decathlon (Task03) dataset, 131 CT volumes, using foreground-biased patch sampling, a combined soft-Dice and BCE loss, cosine learning-rate annealing, and Gaussian sliding-window inference. 0.9886 Dice on the 26-volume 128³ centre-cropped validation split used for model selection, after 200 epochs on a single Kaggle T4 GPU. A leakage-controlled full-volume evaluation pipeline with physical-unit HD95 has been implemented; independent evaluation is pending retraining on the original NIfTI data.
 
 ## Selected Results
 
@@ -55,7 +55,7 @@ A 3D U-Net trained end-to-end for binary liver segmentation on the Medical Segme
 | PINN, advection-diffusion | 5.1×10⁻³ relative L2 error vs. analytical solution |
 | Photoacoustic reconstruction | PSNR 18.97 dB (time-reversal) → 30.73 dB (learned refinement) |
 | Differentiable inverse rendering | MSE converges from ~1×10⁻⁵ to ~1×10⁻⁶ over 2,000 steps |
-| Liver segmentation (3D U-Net) | Validation Dice 0.9886, HD95 ≤ 1 mm |
+| Liver segmentation (3D U-Net) | 0.9886 Dice on the 26-volume 128³ centre-cropped validation split used for model selection |
 
 All numbers above are read directly from each project's own logged output, saved metrics, or notebook results, not aspirational figures.
 
