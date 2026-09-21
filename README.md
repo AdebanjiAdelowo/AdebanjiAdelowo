@@ -18,7 +18,7 @@ M.Sc. thesis deriving the Lin-Thiffeault-Doering optimal-mixing velocity field f
 ### Phase-Field Modelling of Boiling Flows
 [boiling-phasefield-3d](https://github.com/AdebanjiAdelowo/boiling-phasefield-3d)
 
-A conservative Allen-Cahn phase-field model for vapour-liquid phase change, coupled to incompressible Navier-Stokes and an energy equation with a latent-heat source term. The pressure Poisson equation has constant coefficients by construction and is solved directly with FFTs, a property that carries over unchanged to 3D. The 2D bubble-growth benchmark is validated against the analytical growth rate with demonstrated second-order convergence; a 1D Stefan-problem benchmark was also attempted but is not validated, matching the analytical solution only in an early transient before diverging due to identified vaporisation-rate and boundary-condition issues. A 3D solver is implemented but not yet run or validated.
+A conservative Allen-Cahn phase-field model for vapour-liquid phase change, coupled to incompressible Navier-Stokes and an energy equation with a latent-heat source term. The pressure Poisson equation has constant coefficients by construction and is solved directly with FFTs, a property that carries over unchanged to 3D. The 2D bubble-growth benchmark agrees with the analytical growth rate, with the error decreasing under grid refinement. A dedicated non-periodic 1D Stefan solver, developed after diagnosing the original benchmark implementation, converges at first order to 0.079% interface-position error (Δx = 0.125 mm, t = 250 s) with verified mass and energy balances. The 3D solver is numerically verified, not physically validated; the general multiphase heat-flux pathway remains under validation.
 
 ### Reduced-Order and Neural Surrogate Modelling of Burgers' Equation
 [neural-surrogate-burgers](https://github.com/AdebanjiAdelowo/neural-surrogate-burgers)
@@ -50,7 +50,8 @@ A 3D U-Net trained end-to-end for binary liver segmentation on the Medical Segme
 | Project | Result |
 |---|---|
 | Optimal mixing (Master-Thesis) | Reproduces reference exponential H⁻¹ decay; resolution study at N=32 and N=64 |
-| Phase-field boiling, 2D bubble growth | Matches analytical growth rate; second-order convergence in grid spacing |
+| Phase-field boiling, 2D bubble growth | Matches analytical growth rate; error decreases under grid refinement |
+| Phase-field boiling, dedicated 1D Stefan solver | First-order convergence; 0.079% interface-position error at Δx = 0.125 mm (t = 250 s) |
 | Burgers ROM vs. surrogate | 0.15% vs. 0.79% relative L2 error in-distribution; 0.06% vs. 56% out-of-distribution |
 | PINN, advection-diffusion | 5.1×10⁻³ relative L2 error vs. analytical solution |
 | Photoacoustic reconstruction | PSNR 18.97 dB (time-reversal) → 30.73 dB (learned refinement) |
