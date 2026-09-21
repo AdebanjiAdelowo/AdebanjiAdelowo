@@ -28,7 +28,7 @@ Compares a POD-Galerkin reduced-order model against a neural-network (MLP) surro
 ### Physics-Informed Neural Network: 1D Advection-Diffusion
 [pinn-advection-diffusion](https://github.com/AdebanjiAdelowo/pinn-advection-diffusion)
 
-A PyTorch PINN that learns the solution of the 1D advection-diffusion equation by enforcing the PDE residual, initial condition, and periodic boundary condition through automatic differentiation, with no labelled interior data. Reaches 5.1×10⁻³ relative L2 error against the closed-form analytical solution.
+A PyTorch PINN that learns the solution of the 1D advection-diffusion equation by enforcing the PDE residual, initial condition, and value-and-derivative periodic boundary conditions through automatic differentiation, with no labelled interior data. A controlled five-seed study reduced the boundary derivative mismatch 7–38× versus value-only enforcement; global L2 error did not improve reliably at the original training budget.
 
 ### Learned Photoacoustic Image Reconstruction
 [photoacoustic-reconstruction](https://github.com/AdebanjiAdelowo/photoacoustic-reconstruction)
@@ -53,7 +53,7 @@ A 3D U-Net trained end-to-end for binary liver segmentation on the Medical Segme
 | Phase-field boiling, 2D bubble growth | Matches analytical growth rate; error decreases under grid refinement |
 | Phase-field boiling, dedicated 1D Stefan solver | First-order convergence; 0.079% interface-position error at Δx = 0.125 mm (t = 250 s) |
 | Burgers ROM vs. surrogate | 0.15% vs. 0.79% relative L2 error in-distribution; 0.06% vs. 56% out-of-distribution |
-| PINN, advection-diffusion | 5.1×10⁻³ relative L2 error vs. analytical solution |
+| PINN, advection-diffusion | 7–38× lower boundary derivative mismatch vs. value-only enforcement (five seeds); no reliable global L2 improvement at 15,000 epochs |
 | Photoacoustic reconstruction | PSNR 18.97 dB (time-reversal) → 30.73 dB (learned refinement) |
 | Differentiable inverse rendering | MSE converges from ~1×10⁻⁵ to ~1×10⁻⁶ over 2,000 steps |
 | Liver segmentation (3D U-Net) | 0.9886 Dice on the 26-volume 128³ centre-cropped validation split used for model selection |
