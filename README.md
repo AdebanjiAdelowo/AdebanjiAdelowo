@@ -56,7 +56,7 @@ Additional implementations include [TV image inpainting](https://github.com/Adeb
 
 ## Background
 
-**M.Sc. Mathematical Engineering**, University of L’Aquila, Italy (2018–2021). Supervisor: Prof. Stefano Spirito.
+**M.Sc. Mathematical Engineering**, University of L’Aquila, Italy (2018–2021).
 
 Thesis: *Bounds on mixing of passive scalars advected by incompressible energy and enstrophy constrained flows and Anomalous dissipation*.
 
