@@ -12,36 +12,31 @@ Numerical simulation · Inverse problems and uncertainty · Reduced-order modell
 
 ## Featured projects
 
-### Navier–Stokes and reduced-order modelling
+### Verified 2D flow simulation
 
-Fourier pseudo-spectral flow simulation with POD-Galerkin and DEIM reduced models. The rank-16 tensor ROM achieves **38.5× online speed-up at under 0.1% mean state error on its training trajectory**, with limited generalisation to unseen flows.
+A Fourier pseudo-spectral Navier–Stokes solver for periodic flows, with dealiasing, energy and enstrophy diagnostics, and analytical verification. Manufactured-solution studies demonstrate **fourth-order time accuracy** for the full-order solver.
 
 [Code](https://github.com/AdebanjiAdelowo/navier-stokes-2d) · [Case study](https://adebanjioluwatimileyin.github.io/projects/navier-stokes.html)
 
-### Deterministic and Bayesian Darcy inversion
+### Total-variation image inpainting
 
-Adjoint-based optimisation and pCN MCMC for permeability recovery from pressure observations. The sampled posterior mean has **0.59% relative error on a linear-Gaussian reference problem**; mixing remains limited for the full PDE posterior.
+A Python package for reconstructing missing greyscale image regions while preserving known pixels exactly. Includes a command-line interface and comparisons with harmonic and biharmonic reconstruction across five images and nineteen masks. Best suited to simple structures and thin missing regions; fine textures and large holes remain challenging.
 
-[Code](https://github.com/AdebanjiAdelowo/darcy-inverse-problem) · [Case study](https://adebanjioluwatimileyin.github.io/projects/darcy.html)
+[Code and benchmarks](https://github.com/AdebanjiAdelowo/Image_inpainting)
 
-### Finite elements and topology optimisation
+### FinBERT model compression
 
-A two-dimensional elasticity solver and SIMP optimiser for material-efficient structures, with manufactured-solution convergence checks and Taylor-tested compliance sensitivities.
+Knowledge distillation for financial-sentiment classification, with saved baseline and student evaluations. The smaller model achieves **96.9% test accuracy with approximately 19% fewer parameters**, compared with 97.6% baseline accuracy on the recorded Financial PhraseBank split.
 
-[Code](https://github.com/AdebanjiAdelowo/fem-topology-optimization) · [Case study](https://adebanjioluwatimileyin.github.io/projects/topology-optimization.html)
+[Code and results](https://github.com/AdebanjiAdelowo/ai-projects-portfolio/tree/main/01-financial-sentiment-distillation)
 
-## More to explore
+### INTUOS flight-data dashboard
 
-- [Cylinder-flow benchmarks](https://github.com/AdebanjiAdelowo/fem-cylinder-flow): finite-element flow simulation and benchmark comparisons in FEniCSx/PETSc.
-- [Burgers reduced models and neural operators](https://github.com/AdebanjiAdelowo/neural-surrogate-burgers): accuracy, runtime, and generalisation comparisons across classical and learned approximations.
-- [Lorenz-96 data assimilation](https://github.com/AdebanjiAdelowo/lorenz96-data-assimilation): ensemble Kalman filtering, covariance localisation, and chaotic dynamics.
-- [Photoacoustic reconstruction](https://github.com/AdebanjiAdelowo/photoacoustic-reconstruction): learned refinement of sparse-view acoustic-image reconstructions.
+An application developed at Intuos Srl for exploring recorded aircraft and flight data. Connects FastAPI and IBM DB2 to a React/TypeScript interface with interactive maps, authentication, rule-based flight-envelope checks, and Docker Compose configuration. Designed for internal analysis with authorised database access.
 
-[Explore all projects and results →](https://adebanjioluwatimileyin.github.io/projects.html)
+[Code and documentation](https://github.com/AdebanjiAdelowo/intuos-fdm-dashboard)
 
-## Engineering experience
-
-My industry work spans aviation analytics, predictive modelling, and engineering software. At Intuos Srl, I developed a [flight-monitoring dashboard](https://github.com/AdebanjiAdelowo/intuos-fdm-dashboard) serving classifiers and analytics over recorded telemetry using FastAPI, IBM DB2, React/Vite, and Docker. My independent work includes an [audio-based engine-monitoring prototype](https://github.com/AdebanjiAdelowo/aircraft-engine-monitor) and [LLM applications and model compression](https://github.com/AdebanjiAdelowo/ai-projects-portfolio).
+[Explore more projects and research →](https://adebanjioluwatimileyin.github.io/projects.html)
 
 ## Background and tools
 
