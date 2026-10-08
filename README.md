@@ -2,49 +2,57 @@
 
 **Applied Mathematician · Scientific Machine Learning Researcher**
 
-I develop numerical methods for PDEs, fluid dynamics, and inverse problems, with a focus on reduced-order modelling and scientific machine learning. My work combines mathematical analysis, reproducible simulation, and experience building machine-learning and data systems in industry.
+I develop numerical methods for partial differential equations, fluid dynamics, inverse problems, reduced-order modelling, and data assimilation. My work combines mathematical analysis, numerical simulation, and scientific machine learning, with an emphasis on verification, reproducibility, and understanding where computational models succeed or fail.
 
 [Website](https://adebanjioluwatimileyin.github.io/) · [CV](https://adebanjioluwatimileyin.github.io/cv.pdf) · [LinkedIn](https://linkedin.com/in/adebanjioluwatimileyin) · [Email](mailto:adelowooluwatimileyin@gmail.com)
 
 ## Research focus
 
-Numerical simulation · Inverse problems and uncertainty · Reduced-order modelling · Scientific machine learning
+**Numerical PDEs & scientific computing · Computational fluid dynamics · Inverse problems & uncertainty · Reduced-order modelling · Scientific machine learning · Data assimilation**
 
-## Featured projects
+## Selected research projects
 
-### Verified 2D flow simulation
+### FEM simulation of flow around a cylinder
 
-A Fourier pseudo-spectral Navier–Stokes solver for periodic flows, with dealiasing, energy and enstrophy diagnostics, and analytical verification. Manufactured-solution studies demonstrate **fourth-order time accuracy** for the full-order solver.
+A finite-element implementation of the Schäfer–Türek incompressible-flow benchmark using Taylor–Hood elements and Newton iteration. The project includes manufactured-solution verification, geometry and force-evaluation studies, and steady and periodic benchmark cases. The periodic study recovers vortex shedding with Strouhal number approximately **0.302**, while documenting the remaining sensitivity of force extrema to discretisation and post-processing choices.
 
-[Code](https://github.com/AdebanjiAdelowo/navier-stokes-2d) · [Case study](https://adebanjioluwatimileyin.github.io/projects/navier-stokes.html)
+[Code](https://github.com/AdebanjiAdelowo/fem-cylinder-flow) · [Case study](https://adebanjioluwatimileyin.github.io/projects/fem-cylinder-flow.html)
 
-### Total-variation image inpainting
+### Photoacoustic reconstruction
 
-A Python package for reconstructing missing greyscale image regions while preserving known pixels exactly. Includes a command-line interface and comparisons with harmonic and biharmonic reconstruction across five images and nineteen masks. Best suited to simple structures and thin missing regions; fine textures and large holes remain challenging.
+A sparse-view photoacoustic inverse-problem study comparing model-based and learned reconstruction methods. The project includes an explicit forward operator and adjoint, Tikhonov regularisation, learned reconstruction, and an unrolled model with exact data-consistency steps. Experiments also examine distribution shift, where thin vessel-like structures expose limitations of learned image priors.
 
-[Code and benchmarks](https://github.com/AdebanjiAdelowo/Image_inpainting)
+[Code](https://github.com/AdebanjiAdelowo/photoacoustic-reconstruction) · [Case study](https://adebanjioluwatimileyin.github.io/projects/photoacoustic-reconstruction.html)
 
-### FinBERT model compression
+### Reduced-order modelling and operator learning for Burgers' equation
 
-Knowledge distillation for financial-sentiment classification, with saved baseline and student evaluations. The smaller model achieves **96.9% test accuracy with approximately 19% fewer parameters**, compared with 97.6% baseline accuracy on the recorded Financial PhraseBank split.
+A comparative study of full-order simulation, POD–Galerkin reduction, DEIM hyper-reduction, and Fourier Neural Operators for the viscous Burgers equation. The project separates projection error, reduced-dynamics error, hyper-reduction error, and learned-operator generalisation, and includes reproducible CPU, Apple-silicon, and CUDA experiments.
 
-[Code and results](https://github.com/AdebanjiAdelowo/ai-projects-portfolio/tree/main/01-financial-sentiment-distillation)
+[Code](https://github.com/AdebanjiAdelowo/neural-surrogate-burgers) · [Case study](https://adebanjioluwatimileyin.github.io/projects/neural-surrogate-burgers.html)
 
-### INTUOS flight-data dashboard
+### Ensemble Kalman data assimilation for Lorenz–96
 
-An application developed at Intuos Srl for exploring recorded aircraft and flight data. Connects FastAPI and IBM DB2 to a React/TypeScript interface with interactive maps, authentication, rule-based flight-envelope checks, and Docker Compose configuration. Designed for internal analysis with authorised database access.
+An Ensemble Kalman Filter study for the chaotic Lorenz–96 system, including covariance inflation, Gaspari–Cohn localisation, observation-density experiments, rank diagnostics, and repeated-seed studies. An independent linear-Gaussian Kalman experiment verifies the ensemble update, while small-ensemble experiments document genuine filter failure and under-dispersion rather than hiding unsuccessful regimes.
 
-[Code and documentation](https://github.com/AdebanjiAdelowo/intuos-fdm-dashboard)
+[Code](https://github.com/AdebanjiAdelowo/lorenz96-data-assimilation) · [Case study](https://adebanjioluwatimileyin.github.io/projects/lorenz96-data-assimilation.html)
 
-[Explore more projects and research →](https://adebanjioluwatimileyin.github.io/projects.html)
+## M.Sc. research
+
+### Optimal mixing of passive scalars
+
+My M.Sc. thesis in Mathematical Engineering studied mixing of passive scalars advected by incompressible flows under energy and enstrophy constraints. The computational work uses Fourier pseudo-spectral methods and an instantaneous optimisation strategy to investigate decay of negative-Sobolev mixing norms, together with resolution and convergence studies that distinguish empirical behaviour from theoretical bounds.
+
+[Thesis repository](https://github.com/AdebanjiAdelowo/Master-Thesis) · [Research background](https://adebanjioluwatimileyin.github.io/research-outputs.html)
 
 ## Background and tools
 
 - **M.Sc. Mathematical Engineering**, University of L’Aquila, Italy, 2021.
 - **B.Sc. Mathematics**, Obafemi Awolowo University, Nigeria, 2018.
 
-[Thesis and research background →](https://adebanjioluwatimileyin.github.io/research-outputs.html)
+**Methods:** finite elements, spectral and pseudo-spectral methods, adjoint optimisation, Bayesian inference, POD–Galerkin reduction, DEIM, neural operators, ensemble data assimilation.
 
-**Tools:** Python, NumPy, SciPy, PyTorch, scikit-learn, MATLAB, FEniCSx, PETSc, SQL, FastAPI, Docker, Git.
+**Tools:** Python, NumPy, SciPy, PyTorch, FEniCSx, PETSc, scikit-learn, MATLAB, SQL, FastAPI, Docker, Git.
 
-Based in L’Aquila, Italy. I welcome conversations about scientific computing, applied ML, and uncertainty-aware models for physical systems.
+[Explore more projects and research →](https://adebanjioluwatimileyin.github.io/projects.html)
+
+Based in L’Aquila, Italy. I welcome conversations about PhD research and collaborations in scientific computing, numerical PDEs, scientific machine learning, inverse problems, and computational modelling.
