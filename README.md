@@ -6,7 +6,7 @@ I'm a mathematician and machine learning engineer working across numerical metho
 
 I care about more than whether a model produces a good result: I want to understand why it works, how reliably it performs, and where it breaks down.
 
-[Website](https://adebanjiadelowo.github.io/) · [CV](https://adebanjioluwatimileyin.github.io/cv.pdf) · [LinkedIn](https://linkedin.com/in/adebanjioluwatimileyin) · [Email](mailto:adelowooluwatimileyin@gmail.com)
+[Website](https://adebanjiadelowo.github.io/) · [CV](https://adebanjiadelowo.github.io/cv.pdf) · [LinkedIn](https://linkedin.com/in/adebanjioluwatimileyin) · [Email](mailto:adelowooluwatimileyin@gmail.com)
 
 ## Research focus
 
@@ -14,27 +14,33 @@ Numerical PDEs · Computational fluid dynamics · Inverse problems · Reduced-or
 
 ## Selected research projects
 
+### Physics-informed neural operators for Darcy flow
+
+I studied how the PDE-residual loss affects a Fourier Neural Operator trained on Darcy flow data, including a mismatch between the original example's residual and its dataset. With a corrected, data-consistent residual and the upstream 50-epoch training budget, the five-seed study reports **21.6% lower mean test relative L² error** than data-only training on Apple MPS; a pre-registered CUDA replication reports **21.5%**. These results apply to the tested dataset and training protocol, not to physics-informed models generally. A later regularisation comparison reused an examined test split and is not independent holdout confirmation.
+
+[Code and experimental results](https://github.com/AdebanjiAdelowo/physicsnemo-pino-darcy) · [Scientific audit](https://github.com/AdebanjiAdelowo/physicsnemo-pino-darcy/blob/main/docs/SCIENTIFIC_AUDIT.md)
+
+### Reduced-order modelling and operator learning for Burgers' equation
+
+This project compares a pseudo-spectral solver, POD–Galerkin and DEIM reduced models, and learned surrogates for viscous Burgers' equation. I examine where the methods gain or lose accuracy and speed, including parameter extrapolation and the distinction between integration error and reduced-model error. For the tested solution family, classical reduced models remain accurate outside the training range while learned surrogates can deteriorate; the conclusions are specific to those experiments.
+
+[Code](https://github.com/AdebanjiAdelowo/neural-surrogate-burgers) · [Case study](https://adebanjioluwatimileyin.github.io/projects/neural-surrogate-burgers.html)
+
 ### FEM simulation of flow around a cylinder
 
-A finite-element implementation of the Schäfer–Türek incompressible-flow benchmark using Taylor–Hood elements and Newton iteration. The project includes manufactured-solution verification, geometry and force-evaluation studies, and steady and periodic benchmark cases. The periodic study recovers vortex shedding with Strouhal number approximately **0.302**, while documenting the remaining sensitivity of force extrema to discretisation and post-processing choices.
+A finite-element study of the Schäfer–Türek incompressible-flow benchmark using Taylor–Hood elements and Newton iteration. It includes manufactured-solution checks, steady and periodic flow cases, and force-evaluation studies. The periodic case recovers vortex shedding with a Strouhal number of approximately **0.302**, while force extrema remain sensitive to discretisation and post-processing.
 
 [Code](https://github.com/AdebanjiAdelowo/fem-cylinder-flow) · [Case study](https://adebanjioluwatimileyin.github.io/projects/fem-cylinder-flow.html)
 
 ### Photoacoustic reconstruction
 
-A sparse-view photoacoustic inverse-problem study comparing model-based and learned reconstruction methods. The project includes an explicit forward operator and adjoint, Tikhonov regularisation, learned reconstruction, and an unrolled model with exact data-consistency steps. Experiments also examine distribution shift, where thin vessel-like structures expose limitations of learned image priors.
+I compare model-based and learned methods for sparse-view photoacoustic reconstruction, including an explicit forward operator and adjoint, Tikhonov regularisation, and an unrolled reconstruction model with data-consistency steps. Tests under distribution shift show how thin, vessel-like structures can challenge learned image priors.
 
 [Code](https://github.com/AdebanjiAdelowo/photoacoustic-reconstruction) · [Case study](https://adebanjioluwatimileyin.github.io/projects/photoacoustic-reconstruction.html)
 
-### Reduced-order modelling and operator learning for Burgers' equation
-
-A comparative study of full-order simulation, POD–Galerkin reduction, DEIM hyper-reduction, and Fourier Neural Operators for the viscous Burgers equation. The project separates projection error, reduced-dynamics error, hyper-reduction error, and learned-operator generalisation, and includes reproducible CPU, Apple-silicon, and CUDA experiments.
-
-[Code](https://github.com/AdebanjiAdelowo/neural-surrogate-burgers) · [Case study](https://adebanjioluwatimileyin.github.io/projects/neural-surrogate-burgers.html)
-
 ### Ensemble Kalman data assimilation for Lorenz–96
 
-An Ensemble Kalman Filter study for the chaotic Lorenz–96 system, including covariance inflation, Gaspari–Cohn localisation, observation-density experiments, rank diagnostics, and repeated-seed studies. An independent linear-Gaussian Kalman experiment verifies the ensemble update, while small-ensemble experiments document genuine filter failure and under-dispersion rather than hiding unsuccessful regimes.
+An Ensemble Kalman Filter study for the chaotic Lorenz–96 system. It explores covariance inflation, localisation, observation density, and ensemble size, with repeated-seed diagnostics and an independent linear-Gaussian update check. I also document filter failure and under-dispersion in small-ensemble settings rather than reporting only successful runs.
 
 [Code](https://github.com/AdebanjiAdelowo/lorenz96-data-assimilation) · [Case study](https://adebanjioluwatimileyin.github.io/projects/lorenz96-data-assimilation.html)
 
