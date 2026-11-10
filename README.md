@@ -48,8 +48,6 @@ An Ensemble Kalman Filter study for the chaotic Lorenz–96 system. It explores 
 
 I've built machine learning and data-processing systems for aviation telemetry and connected devices. My work includes flight-phase classification, engine-RPM estimation, anomaly detection, transaction-log analysis, ETL pipelines, and API-backed tools. These projects have taught me to pay attention to data quality, validation, and the practical constraints of deploying models.
 
-For research-specific evidence, limitations, and dated project assessments, see my [selected-projects scientific audit](https://github.com/AdebanjiAdelowo/selected-projects-scientific-audit).
-
 ## M.Sc. research
 
 ### Optimal mixing of passive scalars
