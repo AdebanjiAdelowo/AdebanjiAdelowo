@@ -1,14 +1,16 @@
 # Adebanji Adelowo
 
-**Applied Mathematician · Scientific Machine Learning Researcher**
+**Applied Mathematician · Machine Learning Engineer · Scientific Computing**
 
-I develop numerical methods for partial differential equations, fluid dynamics, inverse problems, reduced-order modelling, and data assimilation. My work combines mathematical analysis, numerical simulation, and scientific machine learning, with an emphasis on verification, reproducibility, and understanding where computational models succeed or fail.
+I'm a mathematician and machine learning engineer working across numerical methods, scientific computing, and applied AI. My research projects cover fluid dynamics, inverse problems, numerical PDEs, and data assimilation. In industry, I've worked on time-series analysis, anomaly detection, data pipelines, and machine learning services.
 
-[Website](https://adebanjioluwatimileyin.github.io/) · [CV](https://adebanjioluwatimileyin.github.io/cv.pdf) · [LinkedIn](https://linkedin.com/in/adebanjioluwatimileyin) · [Email](mailto:adelowooluwatimileyin@gmail.com)
+I care about more than whether a model produces a good result: I want to understand why it works, how reliably it performs, and where it breaks down.
+
+[Website](https://adebanjiadelowo.github.io/) · [CV](https://adebanjioluwatimileyin.github.io/cv.pdf) · [LinkedIn](https://linkedin.com/in/adebanjioluwatimileyin) · [Email](mailto:adelowooluwatimileyin@gmail.com)
 
 ## Research focus
 
-**Numerical PDEs & scientific computing · Computational fluid dynamics · Inverse problems & uncertainty · Reduced-order modelling · Scientific machine learning · Data assimilation**
+Numerical PDEs · Computational fluid dynamics · Inverse problems · Reduced-order modelling · Scientific machine learning · Data assimilation
 
 ## Selected research projects
 
@@ -36,6 +38,12 @@ An Ensemble Kalman Filter study for the chaotic Lorenz–96 system, including co
 
 [Code](https://github.com/AdebanjiAdelowo/lorenz96-data-assimilation) · [Case study](https://adebanjioluwatimileyin.github.io/projects/lorenz96-data-assimilation.html)
 
+## Applied ML and engineering
+
+I've built machine learning and data-processing systems for aviation telemetry and connected devices. My work includes flight-phase classification, engine-RPM estimation, anomaly detection, transaction-log analysis, ETL pipelines, and API-backed tools. These projects have taught me to pay attention to data quality, validation, and the practical constraints of deploying models.
+
+For research-specific evidence, limitations, and dated project assessments, see my [selected-projects scientific audit](https://github.com/AdebanjiAdelowo/selected-projects-scientific-audit).
+
 ## M.Sc. research
 
 ### Optimal mixing of passive scalars
@@ -53,6 +61,6 @@ My M.Sc. thesis in Mathematical Engineering studied mixing of passive scalars ad
 
 **Tools:** Python, NumPy, SciPy, PyTorch, FEniCSx, PETSc, scikit-learn, MATLAB, SQL, FastAPI, Docker, Git.
 
-[Explore more projects and research →](https://adebanjioluwatimileyin.github.io/projects.html)
+[Explore more projects and research](https://adebanjiadelowo.github.io/projects.html)
 
-Based in L’Aquila, Italy. I welcome conversations about PhD research and collaborations in scientific computing, numerical PDEs, scientific machine learning, inverse problems, and computational modelling.
+Based in Italy. I'm interested in research collaborations and engineering opportunities involving scientific computing, machine learning, numerical modelling, and applied AI.
