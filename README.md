@@ -16,7 +16,7 @@ Numerical PDEs · Computational fluid dynamics · Inverse problems · Reduced-or
 
 ### Physics-informed neural operators for Darcy flow
 
-I studied how the PDE-residual loss affects a Fourier Neural Operator trained on Darcy flow data, including a mismatch between the original example's residual and its dataset. With a corrected, data-consistent residual and the upstream 50-epoch training budget, the five-seed study reports **21.6% lower mean test relative L² error** than data-only training on Apple MPS; a pre-registered CUDA replication reports **21.5%**. These results apply to the tested dataset and training protocol, not to physics-informed models generally. A later regularisation comparison reused an examined test split and is not independent holdout confirmation.
+Investigated the effect of PDE-residual regularisation on Fourier Neural Operators for Darcy flow, identifying and correcting an inconsistency between the upstream residual formulation and the dataset. Under the original 50-epoch training budget, a five-seed study achieved a **21.6% reduction in mean test relative L² error** compared with data-only training on Apple MPS, independently replicated on CUDA with a **21.5% reduction**. Results are specific to the evaluated dataset and training protocol; subsequent regularisation experiments were exploratory rather than independent holdout validation.
 
 [Code and experimental results](https://github.com/AdebanjiAdelowo/physicsnemo-pino-darcy) · [Scientific audit](https://github.com/AdebanjiAdelowo/physicsnemo-pino-darcy/blob/main/docs/SCIENTIFIC_AUDIT.md)
 
